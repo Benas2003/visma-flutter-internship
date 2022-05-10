@@ -11,10 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter news app',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-      ),
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter News',
       home: ArticlesScreen(),
     );
   }
