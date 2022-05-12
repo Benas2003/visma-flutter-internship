@@ -49,7 +49,7 @@ class CustomArticleScreen extends StatelessWidget {
 
 
     Widget textSection = Padding(
-      padding: EdgeInsets.all(15),
+      padding: EdgeInsets.all(30),
       child: Text(
         customArticle.content.toString(),
         softWrap: true,
@@ -78,7 +78,7 @@ class CustomArticleScreen extends StatelessWidget {
             titleSection,
             textSection,
             Container(
-              margin: const EdgeInsets.only(right: 5, left: 5),
+              margin: const EdgeInsets.only(right: 30, left: 30),
               child:
               ElevatedButton(
                 onPressed: () {

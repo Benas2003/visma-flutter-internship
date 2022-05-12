@@ -31,7 +31,7 @@ class ArticlesScreen extends StatelessWidget {
 
   Widget _buildListTabView() {
     return FutureBuilder<List<Article>>(
-        future: _newsAPI.getEverything(query: 'Boring'),
+        future: _newsAPI.getEverything(query: 'Tesla'),
         builder: (BuildContext context, AsyncSnapshot<List<Article>> snapshot) {
           return snapshot.connectionState == ConnectionState.done
               ? snapshot.hasData
@@ -72,7 +72,7 @@ class ArticlesScreen extends StatelessWidget {
           ),
           onRefresh: () {
             FutureBuilder<List<Article>>(
-                future: _newsAPI.getEverything(query: 'Boring'),
+                future: _newsAPI.getEverything(query: 'Tesla'),
                 builder: (BuildContext context, AsyncSnapshot<List<Article>> snapshot) {
                   return snapshot.connectionState == ConnectionState.done
                       ? snapshot.hasData
@@ -80,7 +80,7 @@ class ArticlesScreen extends StatelessWidget {
                       : _buildError(snapshot.error as ApiError)
                       : _buildProgress();
                 });
-              return _newsAPI.getEverything(query: 'Boring');
+              return _newsAPI.getEverything(query: 'Tesla');
           }
       );
   }
